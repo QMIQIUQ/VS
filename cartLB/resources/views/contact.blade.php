@@ -37,10 +37,9 @@
             @endif
 
             <div>
-            contact us</br>
-            asdasdadasd</br>
-            1023123131
-
+            Address:Southern Cart<br>
+                Phone:01111-481639<br>
+                Email:info@Southern.com
             </div>
             
         </div>
