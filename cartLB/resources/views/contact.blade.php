@@ -37,13 +37,12 @@
             @endif
 
             <div>
-                <a class="nav-link" href="{{url('/register')}}">
-                <img src="{{ asset('https://cdn.mos.cms.futurecdn.net/y33vguPCnvSmfCWTUbimUf.jpg')}}"alt="">
-            </div>
+            contact us</br>
+            asdasdadasd</br>
+            1023123131
 
-
-           
             </div>
+            
         </div>
     </body>
 </html>
