@@ -36,7 +36,15 @@
                 </div>
             @endif
 
-            <div>
+            <div class="content">
+                <div class="title m-b-md">
+                    <img src="{{asset('C:\Users\MIQIU\Documents\vs Code\projectTest\VS\cartLB\Image\angular.png')}}" alt="">
+                Sourthen Cart
+                </div>
+                <div class="links">
+                <a href="{{url('/')}}">Home</a>
+                <a href="{{url('/cs')}}">Contact us</a>
+                </div>
             Address:Southern Cart<br>
                 Phone:01111-481639<br>
                 Email:info@Southern.com
