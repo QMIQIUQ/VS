@@ -17,11 +17,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cs', function () {
+
+Route::get('/contact', function () {
     return view('contact');
 });
 
-Auth::routes();
+Route::get('/insertCategory', function () {
+    return view('insertCategory');
+});
+Route::post('/insertCategory/store', [App\Http\Controllers\CategoryController::class, 'store'])->name('addCategory');
 
+
+Route::get('/showCategory', function () {
+    return view('showCategory');
+});
+Route::get('/showCategory', [App\Http\Controllers\CategoryController::class, 'show'])->name('showCategory');
+
+Route::get('/deleteCategory/{id}', [App\Http\Controllers\CategoryController::class, 'delete'])->name('deleteCategory');
+
+
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

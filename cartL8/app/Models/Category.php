@@ -8,11 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-
-    protected $fillable=['name'];
-
-    public function product(){
-
-        return $this->hasMany('App\Product');
-    }
+    protected $fillable=['id','name'];  // enable use upadate the field
 }

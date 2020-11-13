@@ -37,12 +37,9 @@
             @endif
 
             <div>
-                <a class="nav-link" href="{{url('/register')}}">
-                <img src="{{ asset('https://cdn.mos.cms.futurecdn.net/y33vguPCnvSmfCWTUbimUf.jpg')}}"alt="">
-            </div>
-
-
-           
+                Address:Southern Cart <br>
+                Phone: 07-5585555<br>
+                Email: info@southerncart.com
             </div>
         </div>
     </body>
