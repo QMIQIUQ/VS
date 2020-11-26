@@ -20,16 +20,18 @@ class CategoryController extends Controller
         Return view('insertCategory');// step 5 back to last page
     }
 
-   public function show(){
-    $categories=Category::all();//instead SQL select * from categories
-    return view('showCategory')->with('categories',$categories);
+
+    public function show(){
+        $categories=Category::all();//instead SQL select * from categories
+        return view('showCategory')->with('categories',$categories);
     }
 
     public function delete($id){
         $categories=Category::find($id);
-        $categories->delete();//apply delete from categories where id='$id'
+        $categories->delete(); //apply delete from categories where id='$id'
         return redirect()->route('showCategory');
     }
 
+   
 
 }
