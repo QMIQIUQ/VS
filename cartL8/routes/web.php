@@ -48,6 +48,7 @@ Route::get('/deleteProduct/{id}', [App\Http\Controllers\ProductController::class
 
 Route::post('/updateproduct', [App\Http\Controllers\ProductController::class, 'update'])->name('updateproduct');
 
+Route::post('/searchproduct', [App\Http\Controllers\ProductController::class, 'search'])->name('search.product');
 
 Auth::routes();
 
