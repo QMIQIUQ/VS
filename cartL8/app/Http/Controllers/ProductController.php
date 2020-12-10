@@ -40,7 +40,7 @@ class productController extends Controller
 
     public function show(){
         //$products=Product::all();
-        $products=Product::paginate(4);
+        $products=Product::paginate(12);
         return view('showProduct')->with('products',$products);
     }
 
@@ -97,5 +97,30 @@ class productController extends Controller
 
     }
 
-    
+    public function search1(){
+        $r=request();//retrive submited form data
+        $keyword=$r->searchProduct;
+        $products =DB::table('products')
+        ->leftjoin('categories', 'categories.id', '=', 'products.categoryID')
+        ->select('categories.name as catname','categories.id as catid','products.*')
+        ->where('products.name', 'like', '%' . $keyword . '%')
+        ->orWhere('products.description', 'like', '%' . $keyword . '%')
+        //->get();
+        ->paginate(4); 
+               //select * from products left join categories on;
+        return view('productView')->with('products',$products);
+
+    }
+
+
+    public function showProductDetail($id){
+
+        $products =Product::all()->where('id',$id);
+        //select * from products where id='$id'
+
+        return view('productdetail')->with('products',$products)
+                                ->with('categories',Category::all());
+    }
+
+
 }

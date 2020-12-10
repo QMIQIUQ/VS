@@ -50,9 +50,20 @@ Route::post('/updateproduct', [App\Http\Controllers\ProductController::class, 'u
 
 Route::post('/searchproduct', [App\Http\Controllers\ProductController::class, 'search'])->name('search.product');
 
-Route::get('/productView', [App\Http\Controllers\ProductController::class, 'showProduct'])->name('productView');
+//Route::get('/productView', [App\Http\Controllers\ProductController::class, 'showProduct'])->name('productView');
+
+Route::post('/searchproduct', [App\Http\Controllers\ProductController::class, 'search1'])->name('search.product');
+
+Route::get('/productView', [App\Http\Controllers\ProductController::class, 'showProduct'])->name('productsView');
+
+Route::get('/product_detail/{id}', [App\Http\Controllers\ProductController::class, 'showProductDetail'])->name('product.detail');
+
+//productdetail.blade.php?id=11
+
+Route::post('/addToCart', [App\Http\Controllers\CartController::class, 'add'])->name('add.to.cart'); // when user click on add to cart in product detail, id and quantity add to cart
+
+Route::get('/myCart', [App\Http\Controllers\CartController::class, 'show'])->name('my.cart');  //user view all items added to cart
 
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
