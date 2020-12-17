@@ -4,7 +4,7 @@
         @foreach($products as $product)       
         <div class="col-md-6"><img src="{{ asset('images/') }}/{{$product->image}}" alt="" width="50%" class="img-fluid"> </div>
             <div class="col-md-6">
-                <form action="#" method="post">
+            <form action="{{ route('add.to.cart')}}" method="post">
                        @csrf
                     <h5 class="card-title">{{$product->description}}</h5>
                     <p></p>
