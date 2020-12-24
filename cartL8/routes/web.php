@@ -62,7 +62,7 @@ Route::get('/product_detail/{id}', [App\Http\Controllers\ProductController::clas
 
 Route::post('/addToCart', [App\Http\Controllers\CartController::class, 'add'])->name('add.to.cart'); // when user click on add to cart in product detail, id and quantity add to cart
 
-Route::get('/myCart', [App\Http\Controllers\CartController::class, 'show'])->name('my.cart');  //user view all items added to cart
+//Route::get('/myCart', [App\Http\Controllers\CartController::class, 'show'])->name('my.cart');  //user view all items added to cart
 
 Route::get('/showMyCart', [App\Http\Controllers\CartController::class, 'showMyCart'])->name('myCart');
 
