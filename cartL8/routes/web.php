@@ -79,6 +79,9 @@ Route::post('/paypal', [App\Http\Controllers\PaymentController::class, 'payWithp
 // route for check status of the payment
 Route::get('/status', [App\Http\Controllers\PaymentController::class, 'getPaymentStatus'])->name('status');
 
+//auto complete search
+Route::get('/search',[App\Http\Controllers\ProductController::class, 'index'])->name('search');
+Route::get('/autocomplete',[App\Http\Controllers\ProductController::class, 'autocomplete'])->name('autocomplete');
 
 
 //login route
