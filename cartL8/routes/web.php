@@ -83,6 +83,10 @@ Route::get('/status', [App\Http\Controllers\PaymentController::class, 'getPaymen
 Route::get('/search',[App\Http\Controllers\ProductController::class, 'index'])->name('search');
 Route::get('/autocomplete',[App\Http\Controllers\ProductController::class, 'autocomplete'])->name('autocomplete');
 
+//pdf
+Route::get('/pdfReport', [App\Http\Controllers\PDFController::class, 'pdfReport'])->name('pdfReport');
+
+
 
 //login route
 Auth::routes();
