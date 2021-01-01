@@ -47,6 +47,12 @@
 
 			</tbody>
 		</table>
+		<div class="text-center">
+			<a href="{{route('pdfReport')}}" class="btn btn-info">
+			Download Product List
+			</a>
+			
+		</div>
 
 		<div class="text-center">
 			{{ $products->links() }}
